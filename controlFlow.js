@@ -4,7 +4,7 @@ const radius = 5;
 const PI = 3.1415;
 const area =  PI * radius *radius;
 const plantCount = 20 ;
-let noOfweeks = 3;
+let noOfweeks = 1;
 
 const plantArea = 0.8;
 let finalPlantCount = plantCount * (2 ** noOfweeks);
