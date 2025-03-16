@@ -6,7 +6,7 @@ const area =  PI * radius *radius;
 const plantCount = 20 ;
 let noOfweeks = 3;
 
-const plantArea = 0.8
+const plantArea = 0.8;
 let finalPlantCount = plantCount * (2 ** noOfweeks);
 const plantsAreaCovered = finalPlantCount * plantArea ;
 const percentOfAreaCovered = plantsAreaCovered / area * 100;
@@ -17,15 +17,14 @@ let  sugguestion;
 console.log("\tpart 1");
 console.log("--------------------------------------------");
 try{
-     if(percentOfAreaCovered > 100)
-        throw  ("Space wont be available to plant more");
+    //  if(percentOfAreaCovered > 100)
+    //     throw  ("Space wont be available to plant more");
     sugguestion = (percentOfAreaCovered >= 80) ? ("PRUNED") : 
                     ((percentOfAreaCovered >=50)?("MONITERED"):("PLANTED"));
 
     console.log(`${percentOfAreaCovered}% is covered, need to be ${sugguestion}`);
 }catch(err){
     console.error(err);
-    
 }
 
 //  Part 2
@@ -57,46 +56,3 @@ try{
 }catch(err){
     console.error(err);
 }
-
-
-
-// console.log(`${extraAreaFor100Plants} extra area is required to grow 100 plants`);
-
-
-
-// if (percentOfAreaCovered >= 80)
-//     console.log(`${percentOfAreaCovered}% is covered, need to be PRUNED`);
-// else if(percentOfAreaCovered >=50)
-//     console.log(`${percentOfAreaCovered}% is covered, need to be MONITERED`);
-// else    
-//     console.log(`${percentOfAreaCovered}% is covered, need to be PLANTED`);
-
-// if (noOfweeks > 0){
-//     switch(noOfweeks){
-//         case 1:     plantsAreaCovered = plantCount * plantArea;
-//                     emptyArea = area - plantsAreaCovered;
-//                     break;
-//         case 2:     plantCount *= 2;
-//                     plantsAreaCovered = plantCount * plantArea;
-//                     emptyArea = area - plantsAreaCovered;
-//                     break;
-//         case 3:     plantCount *= 2*2;
-//                     plantsAreaCovered = plantCount * plantArea;
-//                     emptyArea = area - plantsAreaCovered;
-//                     break;
-        
-//         default:    console.log("Default")
-//     }
-// }
-
-// console.log(`${emptyArea} is empty and ${plantsAreaCovered} is covered`);
-
-// percentOfAreaCovered = (plantsAreaCovered / area ) * 100;
-
-// if(percentOfAreaCovered < 50){
-//     console.log("PLANTED");
-// }else if(percentOfAreaCovered > 50 && percentOfAreaCovered < 80){
-//     console.log("MONITERED");
-// }else if(percentOfAreaCovered>80){
-//     console.log("PRUNED")
-// }
