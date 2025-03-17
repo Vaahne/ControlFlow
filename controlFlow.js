@@ -47,12 +47,11 @@ console.log("--------------------------------------------");
 let startingPlantsChanged = 100;
 finalPlantCount = startingPlantsChanged * (2 ** noOfweeks);
 const finalPlantArea = finalPlantCount * plantArea;
-console.log(finalPlantArea+" total plants ", finalPlantCount)
 try{
     if(finalPlantArea > area){
-        throw (`${finalPlantArea} area is overcrowded and cannot be accomedated`);
+        throw Error (`${startingPlantsChanged} plants are overcrowded and cannot be accomedated`);
     }
-    console.log(`${finalPlantArea} area can be accomedated in this area`);
+    console.log(`${startingPlantsChanged} plants can be accomedated in this area`);
 }catch(err){
-    console.error(err);
+    console.error(err.message);
 }
